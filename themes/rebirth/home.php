@@ -71,8 +71,8 @@ wp_reset_postdata();
                             <input class="main__radio-btn" type="radio" name="комната" value="2 комнаты" id="2-комн">
                             <label class="main__radio-label oval-element" for="2-комн">2-комн.</label>
                         </div>
-                        <p class="main__draft-text">Однокомнатные квартиры от 23 м&#178;</p>
-                        <span class="main__price">от 5 400 000 ₽</span>
+                        <?php the_field("flat-type")?>
+                        <?php the_field("price1")?>
                         <button class="main__action-btn oval-element--blue">Подобрать квартиру</button>
                     </div>
             </div>
@@ -153,7 +153,7 @@ wp_reset_postdata();
                     <div class="main__consultation-content">
                         <p class="main__label main__question-label">Есть вопросы?</p>
                         <p class="main__question-text">Закажите бесплатную консультацию или звоните за номером:</p>
-                        <p class="main__phone-number">+7 982 45-22-67</p>
+                        <?php the_field("phone")?>
                         <button class="main__consultation-btn oval-element--blue open-modal">Заказать
                             консультацию</button>
                     </div>

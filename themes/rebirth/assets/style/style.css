@@ -221,6 +221,9 @@ button {
   align-items: center;
   padding: 1.875rem 3.75rem;
   margin-bottom: 1.25rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 .modal__btn,
 .modal__close-btn {
