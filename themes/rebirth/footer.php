@@ -2,7 +2,7 @@
     <div class="footer__row">
         <div class="container">
             <div class="footer__top">
-                <a class="footer__logo" href='<?php echo home_url("/index.php")?>'>
+                <a class="footer__logo" href='<?php echo home_url()?>'>
                     <img class="footer__logo-small"
                         src="<?php bloginfo("template_directory") ?>/assets/images/logo/footer-mobile-logo.svg"
                         alt="ЖК Возрождение">

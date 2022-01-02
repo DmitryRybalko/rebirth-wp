@@ -20,10 +20,7 @@
         </div>
         <div class="container">
             <div class="header__main">
-                <h1 class="header__title heading">
-                    Более <span class="underline">1000</span> комфортных квартир от 2,3
-                    млн рублей в Дзержинском р-не Ярославля
-                </h1>
+                <?php the_field("hero-title")?>
                 <div class="header__consultation">
                     <button class="header__action-btn oval-element--blue" href="#">Выбрать квартиру
                         <img class="header__building-icon building-icon"

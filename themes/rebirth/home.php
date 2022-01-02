@@ -8,17 +8,13 @@ Template Name: home
 <main class="main">
     <div class="container">
         <section class="main__section main__benefits-section section-end">
-            <h2 class="main__heading main__benefits-heading">
-                Преимущества жизни в ЖК “Возрождение”
-            </h2>
+            <?php the_field("benefits-heading")?>
             <div class="main__grid">
                 <?php get_template_part('benefit')?>
             </div>
         </section>
         <section class="main__section main__draft-section section-end">
-            <h2 class="main__heading main__draft-heading">
-                Планировка квартир
-            </h2>
+            <?php the_field("draft-heading")?>
             <div class="main__draft">
                 <div class="main__draft-show">
                     <picture>
@@ -46,9 +42,7 @@ Template Name: home
             </form>
         </section>
         <section class="main__section main__gallery-section section-end">
-            <h2 class="main__heading main__gallery-heading">
-                Галерея наших фото
-            </h2>
+            <?php the_field("gallery-heading")?>
             <div class="main__swiper swiper">
                 <div class="main__swiper-wrapper swiper-wrapper">
                     <?php get_template_part('slide-gallery')?>
@@ -58,17 +52,15 @@ Template Name: home
             </div>
         </section>
     </div>
-    <h2 class="main__heading main__gallery-heading">
-        Как купить?
-    </h2>
+    <?php the_field("to-buy-heading")?>
     <section class="main__section main__how-to-section section-end">
         <div class="container">
             <div class="main__how-to">
                 <?php get_template_part('how-to-item')?>
                 <div class="main__how-to-item stretch-item">
                     <div class="main__consultation-content">
-                        <p class="main__label main__question-label">Есть вопросы?</p>
-                        <p class="main__question-text">Закажите бесплатную консультацию или звоните за номером:</p>
+                        <?php the_field("question-label")?>
+                        <?php the_field("question-text")?>
                         <?php the_field("phone")?>
                         <button class="main__consultation-btn oval-element--blue open-modal">Заказать
                             консультацию</button>
@@ -78,9 +70,7 @@ Template Name: home
         </div>
     </section>
     <section class="main__section main__clients-section section-end">
-        <h2 class="main__heading main__clients-heading">
-            Отзывы наших клиентов
-        </h2>
+        <?php the_field("clients-heading")?>
         <div class="main__clients-swiper">
             <div class="main__clients-wrapper swiper-wrapper">
                 <?php get_template_part('client')?>
@@ -89,9 +79,7 @@ Template Name: home
     </section>
     <div class="container">
         <section class="main__section main__partners-section">
-            <h2 class="main__heading main__partners-heading">
-                Наши партнеры
-            </h2>
+            <?php the_field("partners-heading")?>
             <div class="main__grid">
                 <?php get_template_part('partner')?>
             </div>

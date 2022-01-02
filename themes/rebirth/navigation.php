@@ -1,5 +1,5 @@
 <nav class="header__nav">
-    <a class="header__logo logo" href="./index.html">
+    <a class="header__logo logo" href="<?php echo home_url()?>">
         <img class="header__logo-small" src="<?php bloginfo("template_url")?>/assets/images/logo/logo-mobile.svg"
             alt="жк возрождение" />
         <img class="header__logo-big" src="<?php bloginfo("template_url")?>/assets/images/logo/logo.svg"
