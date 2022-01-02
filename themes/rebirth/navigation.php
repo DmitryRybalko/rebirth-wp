@@ -5,20 +5,16 @@
         <img class="header__logo-big" src="<?php bloginfo("template_url")?>/assets/images/logo/logo.svg"
             alt="жк возрождение" />
     </a>
-    <ul class="header__list">
-        <li class="header__item">
-            <a class="header__link nav-link" href="./pages/about.html">О компании</a>
-        </li>
-        <li class="header__item">
-            <a class="header__link nav-link" href="./pages/news.html">Новости</a>
-        </li>
-        <li class="header__item">
-            <a class="header__link nav-link" href="./pages/documents.html">Документы</a>
-        </li>
-        <li class="header__item">
-            <a class="header__link nav-link" href="./pages/projects.html">Проекты</a>
-        </li>
-    </ul>
+
+
+    <?php wp_nav_menu(
+        array(
+            'menu' => "desktop",
+            'container' => '',
+            'theme_location' => 'desktop',
+            'items_wrap' => '<ul id="" class="header__list">%3$s</ul>',
+        )
+    )?>
     <div class="header__phone">
         <div class="header__connect">
             <span class="header__phone-number phone-number">+7 982 45-22-67</span>

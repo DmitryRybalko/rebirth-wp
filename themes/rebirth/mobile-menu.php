@@ -1,18 +1,12 @@
 <div class="mobile-menu">
-    <ul class="mobile-menu__list">
-        <li class="mobile-menu__item">
-            <a class="mobile-menu__link nav-link" href="./pages/about.html">О компании</a>
-        </li>
-        <li class="mobile-menu__item">
-            <a class="mobile-menu__link nav-link" href="./pages/news.html">Новости</a>
-        </li>
-        <li class="mobile-menu__item">
-            <a class="mobile-menu__link nav-link" href="./pages/documents.html">Документы</a>
-        </li>
-        <li class="mobile-menu__item">
-            <a class="mobile-menu__link nav-link" href="./pages/projects.html">Проекты</a>
-        </li>
-    </ul>
+    <?php wp_nav_menu(
+        array(
+            'menu' => "mobile",
+            'container' => '',
+            'theme_location' => 'mobile',
+            'items_wrap' => '<ul id="" class="mobile-menu__list">%3$s</ul>',
+        )
+    )?>
     <div class="mobile-menu__phone">
         <div class="mobile-menu__connect">
             <span class="mobile-menu__phone-number phone-number">+7 982 45-22-67</span>

@@ -6,7 +6,24 @@ function site_scripts() {
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array(), '0.0.1', true );
 }
 
+
+function menus() {
+  $locations = array(
+	'desktop' => 'Desktop menu',
+	'mobile' => 'Mobile menu',		  
+  );	
+  register_nav_menus($locations);
+}
+
+add_action('init', 'menus');
+
+
+
 add_theme_support("post-thumbnails");
 add_theme_support("title-tag");
+
+
+
+
 
 ?>

@@ -33,10 +33,10 @@ button {
   border: none;
   cursor: pointer;
 }
-.nav-link {
+/* .nav-link {
   font-weight: 500;
   color: #002040;
-}
+} */
 .oval-element--blue {
   background: linear-gradient(180deg, #409fff, #007fff);
   box-shadow: 0 10px 10px rgba(0, 32, 64, 0.1),
@@ -131,6 +131,12 @@ button {
 .mobile-menu__list {
   margin-bottom: 2.5rem;
 }
+
+.mobile-menu__item a {
+  font-weight: 500;
+  color: #002040;
+}
+
 .mobile-menu__connect {
   display: flex;
   flex-direction: column;
@@ -1761,10 +1767,14 @@ button.swiper-pagination-bullet {
   .header__item:not(:last-child) {
     margin-right: 3.75rem;
   }
-  .header__link {
+
+  .header__item a {
     position: relative;
+    font-weight: 500;
+    color: #002040;
   }
-  .header__link:before {
+
+  .header__item a:before {
     position: absolute;
     content: "";
     height: 2px;
@@ -1775,8 +1785,9 @@ button.swiper-pagination-bullet {
     z-index: 2;
     transition: width 0.3s;
   }
-  .header__link:focus:before,
-  .header__link:hover:before {
+
+  .header__item a:focus:before,
+  .header__item a:hover:before {
     width: 100%;
   }
   .header__phone-link {
