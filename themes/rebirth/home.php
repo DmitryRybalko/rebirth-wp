@@ -12,40 +12,7 @@ Template Name: home
                 Преимущества жизни в ЖК “Возрождение”
             </h2>
             <div class="main__grid">
-                <?php
-global $post;
-$myposts = get_posts([ 
-	'category_name'    => "benefit",
-    'status' => 'publish',
-    'numberposts' => -1,
-    'order' => 'ASC',
-]);
-if( $myposts ){
-	foreach( $myposts as $post ){
-		setup_postdata( $post );
-		?>
-                <div class="main__accordion">
-                    <div class="main__accordion-item">
-                        <?php the_post_thumbnail(array(), array(
-                                'class' => "main__accordion-bg"
-                        ));?>
-                        <img class="main__accordion-icon" src="<?php the_field('icon-benefit')?>" alt="">
-                        <p class="main__accordion-label main__label"><?php the_title(); ?></p>
-                        <button class="main__accordion-toggle">
-                            <img class="main__accordion-toggle-icon" src="<?php the_field('icon-toggle')?>"
-                                alt="стрелка, обозначающая открыто или скрыто описание">
-                        </button>
-                        <?php the_field("text-benefit-pc")?>
-                    </div>
-                    <div class="main__accordion-content">
-                        <?php the_field("text-benefit-mobile")?>
-                    </div>
-                </div>
-                <?php 
-	}
-} 
-wp_reset_postdata(); 
-?>
+                <?php get_template_part('benefit')?>
             </div>
         </section>
         <section class="main__section main__draft-section section-end">
@@ -84,31 +51,7 @@ wp_reset_postdata();
             </h2>
             <div class="main__swiper swiper">
                 <div class="main__swiper-wrapper swiper-wrapper">
-                    <?php
-global $post;
-
-$myposts = get_posts([ 
-	'category_name'    => "	slide-gallery",
-    'status' => 'publish',
-    'numberposts' => -1,
-    'order' => 'ASC',
-]);
-
-if( $myposts ){
-	foreach( $myposts as $post ){
-		setup_postdata( $post );
-		?>
-                    <div class="main__swiper-slide swiper-slide">
-                        <?php the_post_thumbnail(array(), array(
-                'class' => "main__gallery-slide swiper-lazy"
-                ));?>
-                        <div class="swiper-lazy-preloader"></div>
-                    </div>
-                    <?php 
-	}
-} 
-wp_reset_postdata(); 
-?>
+                    <?php get_template_part('slide-gallery')?>
                 </div>
                 <div class="main__swiper-button swiper-button-prev"></div>
                 <div class="main__swiper-button swiper-button-next"></div>
@@ -121,34 +64,7 @@ wp_reset_postdata();
     <section class="main__section main__how-to-section section-end">
         <div class="container">
             <div class="main__how-to">
-                <?php
-global $post;
-
-$myposts = get_posts([ 
-    'category_name'    => "how-to-buy-item",
-    'status' => 'publish',
-    'numberposts' => -1,
-    'order' => 'ASC',
-]);
-
-if( $myposts ){
-	foreach( $myposts as $post ){
-		setup_postdata( $post );
-		?>
-                <div class="main__how-to-item">
-                    <div class="main__icon-container oval-element--blue">
-                        <img class="main__icon" src="<?php the_field('icon')?>" alt="">
-                    </div>
-                    <div class="main__content">
-                        <?php the_field("label")?>
-                        <?php the_field("text")?>
-                    </div>
-                </div>
-                <?php 
-	}
-}
-wp_reset_postdata(); 
-?>
+                <?php get_template_part('how-to-item')?>
                 <div class="main__how-to-item stretch-item">
                     <div class="main__consultation-content">
                         <p class="main__label main__question-label">Есть вопросы?</p>
@@ -167,36 +83,7 @@ wp_reset_postdata();
         </h2>
         <div class="main__clients-swiper">
             <div class="main__clients-wrapper swiper-wrapper">
-                <?php
-global $post;
-
-$myposts = get_posts([ 
-    'category_name'    => "client-slide",
-    'status' => 'publish',
-    'numberposts' => -1,
-    'order' => 'ASC',
-]);
-
-if( $myposts ){
-	foreach( $myposts as $post ){
-		setup_postdata( $post );
-		?>
-                <div class="main__client-slide swiper-slide">
-                    <div class="main__client">
-                        <img class="main__client-photo" src="<?php the_field('client-photo')?>" alt="фото">
-                        <div class="main__client-meta">
-                            <?php the_field("client-name")?>
-                            <a class="main__client-link" href="<?php the_field("client-link")?>"
-                                target="_blank"><?php the_field("client-link-text")?></a>
-                        </div>
-                    </div>
-                    <?php the_field("client-review")?>
-                </div>
-                <?php 
-	}
-} 
-wp_reset_postdata(); 
-?>
+                <?php get_template_part('client')?>
             </div>
         </div>
     </section>
@@ -206,32 +93,7 @@ wp_reset_postdata();
                 Наши партнеры
             </h2>
             <div class="main__grid">
-
-                <?php
-global $post;
-
-$myposts = get_posts([ 
-    'category_name'    => "partner",
-    'status' => 'publish',
-    'numberposts' => -1,
-    'order' => 'ASC',
-]);
-
-if( $myposts ){
-	foreach( $myposts as $post ){
-		setup_postdata( $post );
-		?>
-                <div class="main__partner">
-                    <?php the_post_thumbnail(array(), array(
-                'class' => "main__partner-logo"
-                ));?>
-                </div>
-                <?php 
-	}
-}
-
-wp_reset_postdata(); 
-?>
+                <?php get_template_part('partner')?>
             </div>
         </section>
     </div>
