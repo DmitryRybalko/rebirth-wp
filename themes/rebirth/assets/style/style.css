@@ -1344,6 +1344,11 @@ button.swiper-pagination-bullet {
   .main__project-info {
     padding: 1.25rem 0.625rem;
   }
+  .main__project-text {
+    font-family: Montserrat, sans-serif;
+    color: #002040;
+    font-weight: 500;
+  }
   .main__project-title {
     font-weight: 600;
     font-size: 1.5rem;
@@ -1825,7 +1830,7 @@ button.swiper-pagination-bullet {
   .header__action-btn {
     padding: 1.875rem 3.4375rem;
   }
-  .active-link:before {
+  .current_page_item a:before {
     position: absolute;
     content: "";
     height: 2px;
