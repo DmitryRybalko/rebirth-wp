@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: documents page
+Template Name: projects page
 */
 ?>
 <?php get_header() ?>
@@ -10,7 +10,7 @@ Template Name: documents page
     if(have_posts()) {
         while(have_posts()) {
             the_post();
-            get_template_part('template-parts/page', 'documents');
+            get_template_part('template-parts/page', 'project');
         }
     }
 ?>
